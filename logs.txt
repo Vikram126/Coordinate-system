@@ -1,0 +1,129 @@
+(coord) vikram@vikram:~/Desktop/coordinateSystem $ python3 calibrationTest.py 
+[0:15:23.203516939] [2506]  INFO Camera camera_manager.cpp:327 libcamera v0.4.0+53-29156679
+[0:15:23.211369771] [2512]  INFO RPI pisp.cpp:720 libpisp version v1.1.0 e7974a156008 27-01-2025 (21:50:51)
+[0:15:23.221650416] [2512]  INFO RPI pisp.cpp:1179 Registered camera /base/axi/pcie@120000/rp1/i2c@88000/imx708@1a to CFE device /dev/media1 and ISP device /dev/media0 using PiSP variant BCM2712_C0
+[0:15:23.225551582] [2506]  INFO Camera camera.cpp:1202 configuring streams: (0) 640x480-XBGR8888 (1) 1536x864-BGGR_PISP_COMP1
+[0:15:23.225658434] [2512]  INFO RPI pisp.cpp:1484 Sensor: /base/axi/pcie@120000/rp1/i2c@88000/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10 - Selected CFE format: 1536x864-PC1B
+QObject::moveToThread: Current thread (0x1bec7fa0) is not the object's thread (0x1c20a380).
+Cannot move to target thread (0x1bec7fa0)
+
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/cv2/qt/plugins" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: xcb, eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx.
+
+Aborted
+
+
+QT_QPA_PLATFORM=xcb python3 calibrationTest.py
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.3 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/vikram/Desktop/coordinateSystem/calibrationTest.py", line 4, in <module>
+    import cv2
+AttributeError: _ARRAY_API not found
+Traceback (most recent call last):
+  File "/home/vikram/Desktop/coordinateSystem/calibrationTest.py", line 4, in <module>
+    import cv2
+ImportError: numpy.core.multiarray failed to import
+
+
+----------------------------For the above errors, use the headless opencv------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+(coord) vikram@vikram:~/Desktop/coordinateSystem $ python3 calibrationTest.py 
+[0:16:40.469775335] [2895]  INFO Camera camera_manager.cpp:327 libcamera v0.4.0+53-29156679
+[0:16:40.477663668] [2901]  INFO RPI pisp.cpp:720 libpisp version v1.1.0 e7974a156008 27-01-2025 (21:50:51)
+[0:16:40.487321961] [2901]  INFO RPI pisp.cpp:1179 Registered camera /base/axi/pcie@120000/rp1/i2c@88000/imx708@1a to CFE device /dev/media3 and ISP device /dev/media0 using PiSP variant BCM2712_C0
+[0:16:40.490474798] [2895]  INFO Camera camera.cpp:1202 configuring streams: (0) 640x480-XBGR8888 (1) 1536x864-BGGR_PISP_COMP1
+[0:16:40.490573522] [2901]  INFO RPI pisp.cpp:1484 Sensor: /base/axi/pcie@120000/rp1/i2c@88000/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10 - Selected CFE format: 1536x864-PC1B
+Traceback (most recent call last):
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/backend_bases.py", line 1152, in _on_timer
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1450, in _step
+    still_going = super()._step(*args)
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1138, in _step
+    self._draw_next_frame(framedata, self._blit)
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1157, in _draw_next_frame
+    self._draw_frame(framedata)
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1789, in _draw_frame
+    self._drawn_artists = self._func(framedata, *self._args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vikram/Desktop/coordinateSystem/calibrationTest.py", line 81, in update
+    draw_axis(frame, rvec, tvec)
+  File "/home/vikram/Desktop/coordinateSystem/calibrationTest.py", line 46, in draw_axis
+    cv2.line(frame, origin, tuple(img_points[1].ravel()), (0, 0, 255), 3)  # X (Red)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.11.0) :-1: error: (-5:Bad argument) in function 'line'
+> Overload resolution failed:
+>  - Can't parse 'pt2'. Sequence item with index 0 has a wrong type
+>  - Can't parse 'pt2'. Sequence item with index 0 has a wrong type
+Aborted
+
+
+
+id=1
+
+(coord) vikram@vikram:~/Desktop/coordinateSystem $ python3 calibrationTest.py 
+[0:20:15.481138285] [2957]  INFO Camera camera_manager.cpp:327 libcamera v0.4.0+53-29156679
+[0:20:15.488980687] [2963]  INFO RPI pisp.cpp:720 libpisp version v1.1.0 e7974a156008 27-01-2025 (21:50:51)
+[0:20:15.499028983] [2963]  INFO RPI pisp.cpp:1179 Registered camera /base/axi/pcie@120000/rp1/i2c@88000/imx708@1a to CFE device /dev/media3 and ISP device /dev/media0 using PiSP variant BCM2712_C0
+[0:20:15.503044175] [2957]  INFO Camera camera.cpp:1202 configuring streams: (0) 640x480-XBGR8888 (1) 1536x864-BGGR_PISP_COMP1
+[0:20:15.503208214] [2963]  INFO RPI pisp.cpp:1484 Sensor: /base/axi/pcie@120000/rp1/i2c@88000/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10 - Selected CFE format: 1536x864-PC1B
+Detected Tag 1 at X:2.0cm Y:-4.0cm Z:7.6cm
+Detected Tag 1 at X:-100.6cm Y:-60.2cm Z:140.7cm
+Detected Tag 1 at X:-92.0cm Y:-55.9cm Z:146.9cm
+Detected Tag 1 at X:-69.6cm Y:-40.2cm Z:110.6cm
+Detected Tag 1 at X:-69.9cm Y:-41.0cm Z:111.2cm
+Detected Tag 1 at X:-73.9cm Y:-45.2cm Z:118.3cm
+Detected Tag 1 at X:-70.6cm Y:-42.4cm Z:112.8cm
+Detected Tag 1 at X:-71.4cm Y:-43.1cm Z:114.1cm
+Detected Tag 1 at X:-73.3cm Y:-44.6cm Z:117.1cm
+Detected Tag 1 at X:-71.8cm Y:-42.8cm Z:114.4cm
+Detected Tag 1 at X:-76.1cm Y:-46.2cm Z:121.1cm
+Detected Tag 1 at X:-77.5cm Y:-46.9cm Z:123.1cm
+Detected Tag 1 at X:-100.8cm Y:-60.9cm Z:160.5cm
+Detected Tag 1 at X:-101.4cm Y:-62.4cm Z:143.1cm
+Detected Tag 1 at X:-77.1cm Y:-46.6cm Z:122.3cm
+Detected Tag 1 at X:-96.4cm Y:-58.6cm Z:153.5cm
+Detected Tag 1 at X:-97.5cm Y:-59.4cm Z:137.1cm
+Detected Tag 1 at X:-89.9cm Y:-55.3cm Z:126.9cm
+Detected Tag 1 at X:-98.3cm Y:-60.1cm Z:138.5cm
+Detected Tag 1 at X:-83.6cm Y:-51.6cm Z:118.3cm
+Detected Tag 1 at X:-123.9cm Y:-76.3cm Z:175.0cm
+Detected Tag 1 at X:-91.2cm Y:-56.3cm Z:129.0cm
+Traceback (most recent call last):
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/backend_bases.py", line 1152, in _on_timer
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1450, in _step
+    still_going = super()._step(*args)
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1138, in _step
+    self._draw_next_frame(framedata, self._blit)
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1157, in _draw_next_frame
+    self._draw_frame(framedata)
+  File "/home/vikram/Desktop/coordinateSystem/coord/lib/python3.11/site-packages/matplotlib/animation.py", line 1789, in _draw_frame
+    self._drawn_artists = self._func(framedata, *self._args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vikram/Desktop/coordinateSystem/calibrationTest.py", line 81, in update
+    draw_axis(frame, rvec, tvec)
+  File "/home/vikram/Desktop/coordinateSystem/calibrationTest.py", line 46, in draw_axis
+    cv2.line(frame, origin, tuple(img_points[1].ravel()), (0, 0, 255), 3)  # X (Red)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.11.0) :-1: error: (-5:Bad argument) in function 'line'
+> Overload resolution failed:
+>  - Can't parse 'pt2'. Sequence item with index 0 has a wrong type
+>  - Can't parse 'pt2'. Sequence item with index 0 has a wrong type
