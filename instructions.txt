@@ -1,0 +1,7 @@
+install these first:
+pip install opencv-python-headless
+pip install matplotlib
+
+then do : sudo apt install libcap-dev
+pip install picamera2
+pip install pupil-apriltags
