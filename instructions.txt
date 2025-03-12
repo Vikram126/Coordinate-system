@@ -5,3 +5,6 @@ pip install matplotlib
 then do : sudo apt install libcap-dev
 pip install picamera2
 pip install pupil-apriltags
+
+Locate the pyvenv.cfg file in your virtual environment directory
+Find the line "include-system-site-packages = false" and change it to true
